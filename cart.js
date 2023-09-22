@@ -26,7 +26,7 @@ function plus(index) {
   mainDiv.innerHTML = "";
   for (let i = 0; i < items.length; i++) {
     //   items[i].Total = `${items[i].Price * items[i].Quantity;}`
-    items[i].total = + items.;
+    items[i].total = +`${items[i].price * items[i].Quantity}`;
     mainDiv.innerHTML += `
         <div class="main"><div> 
         <h2 class=" padding:10px">${items[i].brand}</h2>
@@ -44,7 +44,6 @@ function plus(index) {
 }
 function minus(index) {
   mainDiv.innerHTML = "";
-
   items[index].Quantity -= 1;
   for (let i = 0; i < items.length; i++) {
     mainDiv.innerHTML += `
