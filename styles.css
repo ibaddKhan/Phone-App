@@ -99,3 +99,23 @@ button {
   border: 1px solid black;
   color: red;
 }
+.back-to-home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.back-to-home-button:hover {
+  background-color: #0056b3;
+  border-bottom: 2px solid #fff;
+}
+.back-button {
+  display: flex;
+  margin-top: 10px;
+}

@@ -7,7 +7,7 @@ const phones = [
     ram: 8,
     rom: 256,
     camera: "20 megapixel",
-    price: " Rs. 90,000",
+    price: 90000,
   },
   {
     img: "./assets/iphone.png",
@@ -16,7 +16,7 @@ const phones = [
     ram: 4,
     rom: 1024,
     camera: "30 megapixel",
-    price: " Rs. 255,000",
+    price: 255000,
   },
   {
     img: "./assets/pixel.png",
@@ -25,7 +25,7 @@ const phones = [
     ram: 8,
     rom: 256,
     camera: "30 megapixel",
-    price: " Rs. 190,000",
+    price: 190000,
   },
   {
     img: "./assets/sony.jpg",
@@ -34,7 +34,7 @@ const phones = [
     ram: 4,
     rom: 128,
     camera: "19 megapixel",
-    price: " Rs. 35,000",
+    price: 35000,
   },
   {
     img: "./assets/note10.png",
@@ -43,7 +43,7 @@ const phones = [
     ram: 4,
     rom: 64,
     camera: "10 megapixel",
-    price: " Rs. 35,000",
+    price: 35000,
   },
   {
     img: "./assets/infi.png",
@@ -52,7 +52,7 @@ const phones = [
     ram: "6/8",
     rom: 256,
     camera: "5 megapixel",
-    price: " Rs. 25,000",
+    price: 25000,
   },
   {
     img: "./assets/spark.png",
@@ -61,7 +61,7 @@ const phones = [
     ram: 12,
     rom: 512,
     camera: "25 megapixel",
-    price: " Rs. 28,000",
+    price: 28000,
   },
 
   {
@@ -71,7 +71,7 @@ const phones = [
     ram: 8,
     rom: 256,
     camera: "20 megapixel",
-    price: " Rs. 18,000",
+    price: 18000,
   },
   {
     img: "./assets/y20.png",
@@ -80,7 +80,7 @@ const phones = [
     ram: 4,
     rom: 64,
     camera: "8 megapixel",
-    price: " Rs. 23,000",
+    price: 23000,
   },
 ];
 for (let i = 0; i < phones.length; i++) {
@@ -92,7 +92,7 @@ for (let i = 0; i < phones.length; i++) {
    <h3>Ram : ${phones[i].ram} Gb</h3>
    <h3>Rom : ${phones[i].rom}Gb</h3>
    <h3>Camera : ${phones[i].camera}</h3>
-   <h3>Price : <span style= "color:red; font-weight:bolder; font-size:20px;">${phones[i].price}</span></h3>
+   <h3 style="Border:1px solid  ;border-radius: 15px 50px;    background-color: #e5f3ff; margin-top:6px ">Price : <span style= "color:red; font-weight:bolder; font-size:20px; "> ${phones[i].price}</span></h3>
    <div class= "button"><button onclick="cart(${i})" class="cart">Buy Now</button></div>
     </div>
     </div>`;
@@ -112,8 +112,11 @@ function cart(index) {
   console.log(pArray);
 }
 function gotoCart() {
+  // const cartItems = JSON.stringify(pArray);
+  // localStorage.setItem("pArray", cartItems);
+  // window.location = "./cart.html";
+  // console.log(pArray);
   const cartItems = JSON.stringify(pArray);
   localStorage.setItem("pArray", cartItems);
   window.location = "./cart.html";
-  console.log(pArray);
 }
