@@ -21,7 +21,7 @@ for (let i = 0; i < items.length; i++) {
      <h3 style="Border:1px solid  ;border-radius: 15px 50px;    background-color: #e5f3ff; margin-top:6px  ;margin-bottom:6px; padding:6px">Price : <span style= "color:red; font-weight:bolder; font-size:20px; ">Total : ${items[i].total}</h3
      <div style="display:flex; justify-content:center; gap:9px;" class= "add-sub"><button onclick="remove(${i})">Delete</button><button onclick="plus(${i})" style="margin:4px; padding:7px 20px;border-radius: 3px;" >+</button><button onclick="minus(${i})" style="margin:4px; padding:7px 20px;border-radius: 3px;">-</button ></div>
       </div>
-      </div><div><button onclick="check(${i});">Check Total</button></div>`;
+      `;
 }
 function plus(index) {
   items[index].Quantity += 1;
@@ -44,7 +44,7 @@ function plus(index) {
        <div style="display:flex; justify-content:center; gap:9px;" class= "add-sub"><button onclick="remove(${i})">Delete</button><button onclick="plus(${i})" style="margin:4px; padding:7px 20px;border-radius: 3px;" >+</button><button onclick="minus(${i})" style="margin:4px; padding:7px 20px;border-radius: 3px;">-</button ></div>
 
         </div>
-        </div><div><button onclick="check(${i});">Check Total</button></div>`;
+        `;
   }
 }
 function minus(index) {
@@ -70,7 +70,7 @@ function minus(index) {
        <div style="display:flex; justify-content:center; gap:9px;" class= "add-sub"><button onclick="remove(${i})">Delete</button><button onclick="plus(${i})" style="margin:4px; padding:7px 20px;border-radius: 3px;" >+</button><button onclick="minus(${i})" style="margin:4px; padding:7px 20px;border-radius: 3px;">-</button ></div>
 
         </div>
-        </div><div><button onclick="check(${i});">Check Total</button></div>`;
+        `;
   }
 }
 
@@ -96,11 +96,13 @@ function remove(index) {
 
         </div>
         </div>
-        <div><button onclick="check(${i});">Check Total</button></div>`;
+        `;
   }
 }
 function check(index) {
-  // items[i].total = +`${items[i].price * items[i].Quantity}`;
-
-  console.log("running", items);
+  let totalCarrier = 0;
+  for (let i = 0; i < items.length; i++) {
+    totalCarrier += items[i].total;
+  }
+  div.innerHTML = totalCarrier;
 }
