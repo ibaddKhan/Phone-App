@@ -101,6 +101,15 @@ for (let i = 0; i < phones.length; i++) {
     </div>`;
 }
 
+const sony = document.querySelectorAll(".image")[3];
+const oppo = document.querySelectorAll(".image")[7];
+if (sony) {
+  sony.style.width = "126px";
+}
+if (oppo) {
+  oppo.style.width = "110px";
+}
+
 function cart(index) {
   if (pArray.includes(phones[index])) {
     for (let i = 0; i < pArray.length; i++) {
