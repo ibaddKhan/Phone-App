@@ -83,6 +83,9 @@ const phones = [
     price: 23000,
   },
 ];
+const data = localStorage.getItem("pArray");
+const arrayData = JSON.parse(data);
+const pArray = [...arrayData];
 for (let i = 0; i < phones.length; i++) {
   mainDiv.innerHTML += `
     <div class="main"><div> 
@@ -97,7 +100,7 @@ for (let i = 0; i < phones.length; i++) {
     </div>
     </div>`;
 }
-const pArray = [];
+
 function cart(index) {
   if (pArray.includes(phones[index])) {
     for (let i = 0; i < pArray.length; i++) {
@@ -112,10 +115,6 @@ function cart(index) {
   console.log(pArray);
 }
 function gotoCart() {
-  // const cartItems = JSON.stringify(pArray);
-  // localStorage.setItem("pArray", cartItems);
-  // window.location = "./cart.html";
-  // console.log(pArray);
   const cartItems = JSON.stringify(pArray);
   localStorage.setItem("pArray", cartItems);
   window.location = "./cart.html";
