@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
     <div class="navbar">
@@ -22,9 +27,13 @@
       </div>
       <div class="search">
         <input type="text" placeholder="Search for products..." />
-        <button>Search</button>
+        <button class="search-btn">Search</button>
+        <a href="#"> <button class="login-signup login">Login</button></a>
+        <button class="login-signup signup">Signup</button>
       </div>
     </div>
+
+    <div id="main-div2"></div>
     <div id="main-div"></div>
     <div id="cart-b" onclick="gotoCart()"><button>Cart</button></div>
     <script src="app.js"></script>
