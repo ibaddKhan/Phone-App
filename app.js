@@ -83,9 +83,7 @@ const phones = [
     price: 23000,
   },
 ];
-const data = localStorage.getItem("pArray");
-const arrayData = JSON.parse(data);
-const pArray = [...arrayData];
+
 // const pArray = [];
 
 for (let i = 0; i < phones.length; i++) {
@@ -111,12 +109,19 @@ if (sony) {
 if (oppo) {
   oppo.style.width = "110px";
 }
-
+const data = localStorage.getItem("pArray");
+const arrayData = JSON.parse(data);
+let pArray;
+if (Array.isArray(arrayData)) {
+  pArray = [...arrayData];
+} else {
+  pArray = [];
+}
 function cart(index) {
   if (pArray.includes(phones[index])) {
     for (let i = 0; i < pArray.length; i++) {
       if (pArray[i] == phones[index]) {
-        phones[index].Quantity += 1;
+        pArray[i].Quantity += 1;
       }
     }
   } else {
@@ -125,11 +130,13 @@ function cart(index) {
   }
   console.log(pArray);
 }
+
 function gotoCart() {
   const cartItems = JSON.stringify(pArray);
   localStorage.setItem("pArray", cartItems);
   window.location = "./cart.html";
 }
+
 const login = document.querySelector(".login");
 const signup = document.querySelector(".signup");
 const mainDiv2 = document.querySelector("#main-div2");
