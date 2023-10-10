@@ -83,10 +83,10 @@ const phones = [
     price: 23000,
   },
 ];
-// const data = localStorage.getItem("pArray");
-// const arrayData = JSON.parse(data);
-// const pArray = [...arrayData];
-const pArray = [];
+const data = localStorage.getItem("pArray");
+const arrayData = JSON.parse(data);
+const pArray = [...arrayData];
+// const pArray = [];
 
 for (let i = 0; i < phones.length; i++) {
   mainDiv.innerHTML += `
