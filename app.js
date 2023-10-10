@@ -186,12 +186,11 @@ function clickingLogin() {
 
   function sub(e) {
     e.preventDefault();
-    let found = false; // Initialize a flag to check if a matching user is found
-
+    let found = false;
     for (let i = 0; i < userD.length; i++) {
       if (email.value == userD[i].email && pass.value == userD[i].Cpass) {
-        found = true; // Set the flag to true if a matching user is found
-        break; // Exit the loop since a match is found
+        found = true;
+        break;
       }
     }
 
@@ -203,6 +202,9 @@ function clickingLogin() {
         showConfirmButton: false,
         timer: 1500,
       });
+      setTimeout(function () {
+        window.location = "index.html";
+      }, 1500);
     } else {
       Swal.fire({
         position: "top-center",
@@ -211,8 +213,10 @@ function clickingLogin() {
         showConfirmButton: false,
         timer: 1500,
       });
+      setTimeout(function () {
+        signing();
+      }, 1500);
     }
-
     form.reset();
   }
 }
@@ -265,10 +269,8 @@ function signing() {
   form.addEventListener("submit", create);
 
   function create(e) {
-    e.preventDefault();
     console.log("Working");
-
-    // Retrieve existing user data from local storage
+    e.preventDefault();
     const existingData = localStorage.getItem("userD");
     const signD = existingData ? JSON.parse(existingData) : [];
     const username = document.querySelector(".username");
@@ -294,6 +296,9 @@ function signing() {
         showConfirmButton: false,
         timer: 1500,
       });
+      setTimeout(function () {
+        window.location = "index.html";
+      }, 1500);
     } else {
       console.log("Passwords are not the same");
       alert("Passwords are not the same");
