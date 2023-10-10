@@ -12,6 +12,7 @@ img {
   background-color: #005aa7;
   color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
@@ -57,6 +58,7 @@ img {
   cursor: pointer;
 }
 .login-signup {
+  font-family: "Poppins", sans-serif;
   display: inline-block;
   position: relative;
   color: white;
@@ -161,7 +163,9 @@ button {
   position: fixed;
   z-index: 111;
 }
-
+.less-h {
+  height: 30px;
+}
 body {
   height: 100vh;
   width: 100%;
@@ -193,6 +197,7 @@ body {
   font-size: 35px;
   font-weight: 600;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 .container form {
   margin-top: -20px;
@@ -204,6 +209,7 @@ body {
 }
 form .data label {
   font-size: 18px;
+  font-family: "Poppins", sans-serif;
 }
 form .data input {
   height: 100%;
@@ -221,7 +227,9 @@ form .forgot-pass {
 }
 form .forgot-pass a {
   color: #3498db;
+  font-size: 15px;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 form .forgot-pass a:hover {
   text-decoration: underline;
@@ -262,4 +270,21 @@ form .btn button {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
+}
+.main-con {
+  /* height: 100px; */
+  /* background-color: transparent; */
+  /* background-color: white; */
+  margin-top: 50px;
+}
+h2#swal2-title {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  color: #1b83f3;
+}
+div#swal2-html-container {
+  font-size: 16px;
+  font-family: "Heebo";
+  font-family: "Poppins", sans-serif;
+  color: #1b83f3;
 }
